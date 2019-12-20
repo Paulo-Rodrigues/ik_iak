@@ -3,7 +3,7 @@
     <%= image_tag("cow.png") %>
     <h1>IK IAK</h1>
     <p>App inspired by Yik yak. More <%= link_to "About", about_path%></p>
-    <%= link_to "Sign up", "#", class: 'button' %>
-    <%= link_to "Sign in", "#", class: 'button' %>
+    <%= link_to "Sign up", new_user_registration_path, class: 'button' %>
+    <%= link_to "Sign in", new_user_session_path, class: 'button' %>
   </section>
 </section>

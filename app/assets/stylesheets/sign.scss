@@ -1,0 +1,19 @@
+.sign-container {
+    height: 100%;
+    background-color: #15f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .button {
+        background-color: #15f3f3;
+        border: 1px solid #fff;
+        width: 100%;
+
+        &:hover {
+            background-color: #13bdbd;
+            border: 1px solid #fff;
+        }
+    }
+}
