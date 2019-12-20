@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'respond_to ' do
+    it {is_expected.to respond_to(:username)}
+  end
 end
