@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  skip_before_action :hide_navbar
   before_action :authenticate_user!
   before_action :find_post, only: [:show, :destroy]
 
