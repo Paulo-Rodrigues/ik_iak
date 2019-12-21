@@ -1,0 +1,8 @@
+<section class="comments-container">
+  <% @post.comments.each do |comment| %>
+    <section class="comment">
+      <p><%= comment.reply %></p>
+      <hr>
+    </section>
+  <% end %>
+</section>

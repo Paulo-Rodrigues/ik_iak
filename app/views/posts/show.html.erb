@@ -1,14 +1,15 @@
-<%= @post.content %>
+<section class="post-show-container">
+  <section class="post-show-box">
+    <p><%= @post.content %></p>
 
-<%= link_to "Delete", post_path(@post), method: :delete %>
+    <p><%= link_to "Delete", post_path(@post), method: :delete %></p>
+    <hr>
 
-<%= form_for [@post, @post.comments.build] do |f| %>
-  <%= f.text_field :reply, placeholder: 'Reply' %>
-  <%= f.submit "Reply!" %>
-<% end %>
+    <%= render 'comments/form' %>
+
+    <%= render 'comments/comments' %>
+
+  </section>
+</section>
 
 
-
-<% @post.comments.each do |comment| %>
-  <%= comment.reply %>
-<% end %>
