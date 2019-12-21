@@ -1,5 +1,17 @@
-Index
-
-<% @posts.each do |post| %>
-  <p><%= post.content %></p>
-<% end %>
+<section class="posts-container">
+  <section class="posts">
+    <% @posts.each do |post| %>
+      <p><%= post.content %></p>
+      <div class="posts-info">
+       <small><%= time_ago_in_words(post.created_at) %></small>
+       <small>
+         <%= link_to post_path(post) do %>
+          <%= post.comments.count %> Replies
+         <% end %>
+       </small>
+       <small>/\ 25 \/</small>
+      </div>
+      <hr>
+    <% end %>
+  </section>
+</section>

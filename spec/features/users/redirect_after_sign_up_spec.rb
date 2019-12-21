@@ -11,6 +11,6 @@ RSpec.feature 'User', type: :feature do
 
     click_button "Sign up"
 
-    expect(page).to have_content("Index")
+    expect(page).to have_content("Welcome")
   end
 end

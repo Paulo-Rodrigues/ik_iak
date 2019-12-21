@@ -1,4 +1,11 @@
-<%= form_for(@post) do |f| %>
-  <%= f.text_area :content, placeholder: 'Content' %>
-  <%= f.submit "Post" %>
-<% end %>
+<section class="new-post-container">
+  <section class="new-post-box">
+    <%= form_for(@post) do |f| %>
+      <%= f.text_area :content, placeholder: 'Content' %>
+      <%= f.submit "Post", class: 'new-post-btn' %>
+    <% end %>
+
+    <%= link_to "Back", posts_path %>
+  </section>
+</section>
+

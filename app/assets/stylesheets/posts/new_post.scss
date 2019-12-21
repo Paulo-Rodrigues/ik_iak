@@ -1,0 +1,14 @@
+.new-post-container {
+    margin: 5% 10% 0 10%;
+
+    .new-post-btn {
+        width: 100%;
+        background-color: #47e4bb;
+        border: 1px solid #fff;
+
+        &:hover {
+            background-color: #13bdbd;
+            border: 1px solid #fff;
+        }
+    }
+}
