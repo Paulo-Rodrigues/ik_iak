@@ -14,5 +14,6 @@ RSpec.describe Vote, type: :model do
     it { is_expected.to validate_presence_of(:user_id) }
     it { is_expected.to validate_presence_of(:votable_id) }
     it { is_expected.to validate_presence_of(:votable_type) }
+    it { is_expected.to validate_presence_of(:vote_status) }
   end
 end
