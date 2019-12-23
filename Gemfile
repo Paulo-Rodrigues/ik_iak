@@ -13,6 +13,7 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem 'geocoder', '~> 1.3', '>= 1.3.7'
 
 group :test do
   gem 'shoulda-matchers'

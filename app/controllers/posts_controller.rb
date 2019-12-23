@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :destroy]
 
   def index
+    @location = request.location
     @posts = Post.most_voted
   end
 
