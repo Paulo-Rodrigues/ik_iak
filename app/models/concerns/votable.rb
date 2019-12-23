@@ -13,6 +13,13 @@ module Votable
   end
 
   module Voted
+   
+    module ClassMethods
+      def most_voted
+        posts = Post.all
+        posts.sort_by {|p| p.total_votes}.reverse
+      end
+    end
 
     def total_votes
       votes.count

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.most_voted
   end
 
   def show
