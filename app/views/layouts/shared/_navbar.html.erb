@@ -1,10 +1,10 @@
 <nav class="navbar">
   <% if user_signed_in? %>
     <%= link_to new_post_path, class: 'navbar-link' do %>
-      <%= image_tag('post', class: 'navbar-link-image') %>
+      <%= image_tag('post.png', class: 'navbar-link-image') %>
     <% end %>
     <%= link_to destroy_user_session_path, method: :delete, class: 'navbar-link' do %>
-      <%= image_tag('exit', class: 'navbar-link-image') %>
+      <%= image_tag('exit.png', class: 'navbar-link-image') %>
     <% end %>
   <% else %>
     <%= link_to "Sign in", new_user_session_path, class: 'navbar-link' %>
