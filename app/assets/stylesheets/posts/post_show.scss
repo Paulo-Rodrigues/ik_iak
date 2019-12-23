@@ -22,3 +22,14 @@
         }
     }
 }
+
+@media(min-width: 600px) {
+    .post-show-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .post-show-box {
+        grid-column: 2 / 3;
+    }
+}

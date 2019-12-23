@@ -17,3 +17,14 @@
         justify-content: space-between;
     }
 }
+
+@media(min-width: 600px) {
+    .posts-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .posts {
+        grid-column: 2 / 3;
+    }
+}

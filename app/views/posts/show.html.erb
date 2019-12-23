@@ -3,7 +3,8 @@
     <p><%= @post.content %></p>
 
     <p><%= link_to "Back", posts_path %>
-    <p><%= link_to "Delete", post_path(@post), method: :delete %></p>
+    <p><%= link_to "Delete", post_path(@post), method: :delete if current_user == @post.user%></p>
+    
     <% if current_user.voted?(@post) %>
       <p>Already voted by you</p>
     <% else %>
