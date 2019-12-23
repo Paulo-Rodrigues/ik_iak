@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   resources :posts, except: [:edit, :update] do
     resources :comments, except: [:edit, :update]
+    member do
+      post 'vote', to: 'votes#create', as: :vote_for
+    end
   end
 
   root 'pages#index'

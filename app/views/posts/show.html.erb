@@ -3,6 +3,11 @@
     <p><%= @post.content %></p>
 
     <p><%= link_to "Delete", post_path(@post), method: :delete %></p>
+    <% if current_user.voted?(@post) %>
+      <p>Already voted by you</p>
+    <% else %>
+      <%= link_to "upvote", vote_for_post_path(@post), method: :post, class: 'button' %>
+    <% end %>
     <hr>
 
     <%= render 'comments/form' %>

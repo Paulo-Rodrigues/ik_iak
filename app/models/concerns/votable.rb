@@ -4,11 +4,7 @@ module Votable
   module Voter
 
     def upvote(votable)
-      votes.create(votable: votable, user_id: self.id, vote_status: :upvote)
-    end
-
-    def downvote(votable)
-      votes.create(votable: votable, user_id: self.id, vote_status: :downvote)
+      votes.create(votable: votable, user_id: self.id)
     end
 
     def voted?(votable)
